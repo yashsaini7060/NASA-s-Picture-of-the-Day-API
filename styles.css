@@ -1,0 +1,31 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+}
+
+#search-form {
+  margin-bottom: 20px;
+}
+
+#current-image-container {
+  border: 2px solid #333;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#search-history {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#search-history li {
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+
+#search-history li:hover {
+  background-color: #f0f0f0;
+}
