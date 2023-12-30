@@ -1,6 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+
 body {
   font-family: 'Arial', sans-serif;
-  margin: 20px;
 }
 
 #search-form {
@@ -8,7 +17,8 @@ body {
 }
 
 #current-image-container {
-  border: 2px solid #333;
+  background-color: black;
+  color: white;
   padding: 10px;
   margin-bottom: 20px;
 }
@@ -28,4 +38,9 @@ body {
 
 #search-history li:hover {
   background-color: #f0f0f0;
+}
+
+img{
+  height: 300px;
+  margin: 20px 0px;
 }

@@ -25,18 +25,30 @@ function getImageOfTheDay(date) {
 }
 
 function displayImage(data) {
+  console.log(data)
     const imageContainer = document.getElementById('current-image-container');
     imageContainer.innerHTML = `
+
+        <h2>Picture on ${data.date}</h2>
+
         <img src="${data.url}" alt="${data.title}">
         <h3>${data.title}</h3>
+        <br>
         <p>${data.explanation}</p>
     `;
 }
 
+
+
 function saveSearch(date) {
-    let searches = JSON.parse(localStorage.getItem('searches')) || [];
-    searches.push(date);
-    localStorage.setItem('searches', JSON.stringify(searches));
+  let searches = JSON.parse(localStorage.getItem('searches')) || [];
+
+  // Check if the date is not today's date before saving
+  const currentDate = new Date().toISOString().split("T")[0];
+  if (date !== currentDate) {
+      searches.push(date);
+      localStorage.setItem('searches', JSON.stringify(searches));
+  }
 }
 
 function addSearchToHistory() {

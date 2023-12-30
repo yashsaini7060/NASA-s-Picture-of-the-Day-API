@@ -7,16 +7,22 @@
     <title>NASA Image Search</title>
 </head>
 <body>
-    <form id="search-form">
-        <label for="search-input">Select Date:</label>
-        <input type="date" id="search-input" required>
-        <button type="submit">Search</button>
-    </form>
+    
 
     <section id="current-image-container">
         <!-- Current image of the day will be displayed here -->
+        <h2 id="date"></h2>
     </section>
 
+    <h2>Search for a Picture of the Day</h2>
+    <br>
+    <form id="search-form">
+      <label for="search-input">Select Date:</label>
+      <input type="date" id="search-input" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <h2>Previous Searches</h2>
     <ul id="search-history">
         <!-- Search history will be displayed here -->
     </ul>
